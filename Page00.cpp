@@ -15,13 +15,20 @@ int main () {
 		{7,4,2}
 	};
 
+	bool continuerLoop = true;
+	while(continuerLoop) {
+		entier = entier+decimale;
+		if(entier>7){
+			continuerLoop = false;
+		}
+	}
 
 	for (int i=0; i<10; i++) {
 
 		if (decimale < pi*100) {
 			charactere = 'B';
 			booleen = !booleen;
-			decimale = decimale + nombreNaturelle;
+			decimale *=2;
 		} else if (decimale == pi) {
 			nombreNaturelle --;
 
