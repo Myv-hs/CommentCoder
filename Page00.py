@@ -37,7 +37,7 @@ while (i<10): # pendant i est moins que 10
 # On peu faire pareil avec un for loop
 for x in range(0,10):
 	if(x!=6):
-		print x
+		print(x)
 
 # Une autre type de varaible est l'array, ou la liste
 semaine = ["Lun", "Mar", "Mer","Jeu","Ven","Sam", "Dim"]
