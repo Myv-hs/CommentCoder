@@ -1,4 +1,21 @@
-# Fonctions et Classes
+# Loops, Fonctions et Recurcivite
+
+# Il y a deux facon de faire des loops
+# while c'est pendant
+# le While Loop:
+i = 0
+while (i<10): # pendant i est moins que 10
+	print(i) # afficher i
+	i = i+1 # ajouter 1 a i
+
+	if(i==6): # si i=6 passer a 7  
+		i=7
+# Ce loop compte de 0 a 9 en sautant le 6
+# et comme il n'y a jamais une solution unique
+# On peu faire pareil avec un for loop
+for x in range(0,10):
+	if(x!=6):
+		print(x)
 
 # Les fonction sont comme les fonctions mathematiques:
 def f(x):
@@ -9,51 +26,6 @@ def f(x):
 	# peu aussi etre une fonction) 
 	return y
 
-# et on peu faire plus que de simples calcules
-def alcool_dans_sang (volumeAlc, poidsPers, genrePers):	
-	if(genrePers == "H"): coefGenre = 0.7
-	elif(genrePers == "F"): coefGenre = 0.6
-	coefDiffusion = coefGenre * poidsPers
-
-	return volumeAlc/coefDiffusion
-
-
-# Une classe est aussi appele un object
-# Ici notre classe represente des personnes
-# Qui sont Client d'un Bar
-class ClientBar:
-	# En tent que ClientBar, ils on des valeurs interessantes
-	def __init__(self, nom, sexe, kg, alcool, verres):
-		self.nom = nom
-		self.genre = sexe
-		self.poids = kg
-		self.alcool = alcool
-		self.verres = verres
-
-	# Ceci n'est pas une fonction ordinaire
-	# On l'apelle une methode
-	def alcool_consome(self):
-		if(self.alcool=="Biere"):
-			degree = 6
-			volume = 250
-		elif(self.alcool=="Vin"):
-			degree = 12
-			volume = 125
-
-		desiteAlcool = 0.8
-		return degree * volume * desiteAlcool
-
-
-
-# Julie et Marc sont clients du bar
-julie = ClientBar("Julie", "F", 47, "Vin", 3)
-marc = ClientBar("Marc", "H", 85, "Biere", 6)
-
-print("Julie a bu", julie.verres, "verres de", julie.alcool)
-print("Marc a bu", marc.verres, "verres de", marc.alcool)
-
-alcoTest_julie = alcool_dans_sang(julie.alcool_consome(),julie.poids, julie.genre)
-alcoTest_marc = alcool_dans_sang(marc.alcool_consome(),marc.poids, marc.genre)
-
-if(alcoTest_marc>0.5 and alcoTest_julie>0.5): print("Marc et Julie doivent prendre un Taxi")
-else: print("Marc et Julie peuvent rentrer eux meme")
+def factorial (x):
+	if(x==0) return 1 # 0! = 1
+	return x*factorial(x-1)

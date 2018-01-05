@@ -17,23 +17,23 @@ int main () {
 	bool booleen = true; // vrais ou faux
 	/*Quelque chose d'important a noter sur les char et les bools
 	c'est qu'ils sont des nombres entiers.
-	Un bool est une valeur de 0 ou 1, 
-	et un char est un nombre 8-bits*/
+	Un bool est une valeur de 0 ou 1,
+	et un char est un nombre 8-bits (256 valeurs)*/
 
 	/*Ces 4 types sont l'essentiel mais il y a d'autres types et
 	on peu affecter les variables de certaines qualites.
 	Avant d'aller plus loin, on va parler de deux qualites 
 	possitbles */
-	const float pi = 3.1415; /*Comme son nom l'indique, une 
-	constance ne varie pas. Ceci peux s'applique a tout les
+	const float pi = 3.141593; /*Comme son nom l'indique, une 
+	constante ne varie pas. Ceci peux s'appliquer a tout les
 	types de variables*/
 	unsigned int nombreNaturelle = 4; /*unsigned est l'anglais
-	pour non-sign: R+ 
-	Sont utilisation sur les types nombre est evidant, mais on
+	pour non-signe: les nombres R+ 
+	Son utilisation sur les types nombre est evidant, mais on
 	peu aussi l'utiliser sur un char */
 
 	/* BONUS // Variables
-	(@MPCIE vous pouvez sauter vers la ligne: )
+	(@MPCIE vous pouvez sauter vers la ligne: 58)
 	Habituellement on va pas se soucier de tout les detailles ici,
 	le compilateur prendra souvent l'initiative. Mais parfois, on
 	veux untiliser un type specifique*/
@@ -51,17 +51,17 @@ int main () {
 
 	/*Parfois il nous faut des valeurs plus grand, ou plus precis
 	Pour avoir un entier plus grand on peu faire appel au long: */
-	long entier32bit = -2147483647;
-	unsigned long naturel32bit = 4294967295;
-	double decimaleDoublePrecision = ;
+	long entier32bit = -2147483647; //long min
+	unsigned long naturel32bit = 4294967295; //ulong max
+	double decimaleDoublePrecision = 3.141592653589793;
 
-	
-	char nom[4] = {'M','a','r','c'};
-	int matrice[3][3] = {
-		{1,3,2},
-		{4,5,2},
-		{7,4,2}
-	};
+	/*Nous reviendrons sur des types de variables plus complexe 
+	dans le future, mais aussi regardera comment ils sont 
+	representees dans la memoire de l'ordinateur (RAM) et avec
+	cette information on pourra organiser nos donnes*/
+
+
+	/* 2 // Operations */
 
 	bool continuerLoop = true;
 	while(continuerLoop) {
